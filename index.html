@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blockchain DNS</title>
+  <!-- Include the Web3 CDN directly -->
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #0f0f0f;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+    h1 {
+      color: skyblue; /* Sky blue color for the heading */
+      font-size: 36px;
+      margin-bottom: 20px;
+      letter-spacing: 1.5px;
+      text-shadow: 0 0 10px skyblue, 0 0 20px skyblue; /* Glow effect in sky blue */
+    }
+    .container {
+      background-color: #222;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      width: 300px;
+      max-width: 100%;
+      text-align: left;
+      position: relative;
+      animation: neonGlow 3s infinite linear;
+      z-index: 1;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 16px;
+      background-color: #f9f9f9;
+    }
+    input:focus {
+      border-color: #3e8e41;
+      background-color: #fff;
+      outline: none;
+    }
+    button {
+      width: 48%;
+      padding: 12px;
+      background-color: skyblue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 5px 0;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #66b3ff;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+    #output {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #f1f1f1;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      color: #555;
+      font-size: 14px;
+      white-space: pre-wrap;
+    }
+    @keyframes neonGlow {
+      0% {
+        box-shadow: 0 0 5px skyblue, 0 0 10px skyblue, 0 0 15px skyblue, 0 0 20px skyblue, 0 0 30px skyblue;
+      }
+      25% {
+        box-shadow: 0 0 10px skyblue, 0 0 15px skyblue, 0 0 20px skyblue, 0 0 30px skyblue, 0 0 40px skyblue;
+      }
+      50% {
+        box-shadow: 0 0 15px skyblue, 0 0 20px skyblue, 0 0 30px skyblue, 0 0 40px skyblue, 0 0 50px skyblue;
+      }
+      75% {
+        box-shadow: 0 0 20px skyblue, 0 0 30px skyblue, 0 0 40px skyblue, 0 0 50px skyblue, 0 0 60px skyblue;
+      }
+      100% {
+        box-shadow: 0 0 30px skyblue, 0 0 40px skyblue, 0 0 50px skyblue, 0 0 60px skyblue, 0 0 70px skyblue;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Blockchain DNS Manager</h1>
+    <div>
+      <input id="domainInput" type="text" placeholder="Enter Domain Name" />
+      <input id="ipInput" type="text" placeholder="Enter IP Address" />
+      <div class="buttons">
+        <button id="addRecordButton">Add Record</button>
+        <button id="getRecordButton">Get Record</button>
+      </div>
+    </div>
+    <p id="output"></p>
+  </div>
+  <!-- Use a regular script for your custom frontend.js -->
+  <script src="frontend.js"></script>
+</body>
+</html>
