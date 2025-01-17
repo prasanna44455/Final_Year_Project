@@ -1,0 +1,187 @@
+/* Basic Styles for the Page */
+body {
+    background-color: #1a1a2e; /* Dark blue background for the page */
+    color: #fff; /* White text color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Create a neon effect with blue and sky blue flashing edges */
+@keyframes neon-flash {
+    0% {
+        box-shadow: 0 0 5px 2px #00bfff, 0 0 10px 4px #00bfff, 0 0 20px 6px #00bfff, 0 0 30px 8px #00bfff;
+    }
+    50% {
+        box-shadow: 0 0 10px 4px #00bfff, 0 0 20px 6px #00bfff, 0 0 30px 8px #00bfff, 0 0 40px 10px #00bfff;
+    }
+    100% {
+        box-shadow: 0 0 5px 2px #00bfff, 0 0 10px 4px #00bfff, 0 0 20px 6px #00bfff, 0 0 30px 8px #00bfff;
+    }
+}
+
+/* Neon flashing effect around DNS Record Manager */
+.neon-border {
+    padding: 20px;
+    border: 2px solid transparent;
+    border-radius: 25px; /* Rounded edges */
+    animation: neon-flash 1.5s infinite alternate;
+    background: rgba(0, 0, 0, 0.7); /* Slightly transparent black background */
+    margin: 20px;
+}
+
+/* Form container */
+form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+/* Input Fields */
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 1.25rem;
+    border-radius: 10px;
+    border: 2px solid #00bfff;
+    background-color: #1a1a2e;
+    color: #fff;
+    box-shadow: 0 0 5px #00bfff;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Focus effect for input fields */
+input[type="text"]:focus {
+    border-color: #87cefa;
+    box-shadow: 0 0 10px #00bfff, 0 0 20px #87cefa;
+}
+
+/* Labels */
+label {
+    font-size: 1.2rem;
+    color: #87cefa;
+    margin-bottom: 8px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Button styles with neon effect */
+button {
+    background-color: #00bfff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.25rem;
+    cursor: pointer;
+    box-shadow: 0 0 5px #00bfff, 0 0 15px #00bfff, 0 0 30px #00bfff;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #87cefa;
+    box-shadow: 0 0 20px #00bfff, 0 0 40px #00bfff, 0 0 60px #00bfff;
+}
+
+/* Additional Form Styling */
+input[type="text"]:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+h1, h2, p {
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #00bfff; /* Sky blue for the main header */
+}
+
+h2 {
+    font-size: 2rem;
+    color: #87cefa; /* Light sky blue for secondary headings */
+}
+
+p {
+    font-size: 1.25rem;
+}
+
+/* Rounded Blinking Neon Effect Around DNS Manager */
+.dns-manager-container {
+    border-radius: 25px; /* Rounded corners */
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent background for the container */
+    animation: neon-flash 1.5s infinite alternate;
+    margin: 20px;
+    box-shadow: 0 0 15px 5px #00bfff, 0 0 30px 10px #00bfff; /* Neon glow effect */
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* The Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label,
+  form input,
+  form button {
+    margin-bottom: 15px;
+  }
+  
